@@ -1,0 +1,13 @@
+def title_decorator(print_name_function):
+    def wrapper(*args):
+        print("Professor: ")
+        print_name_function(*args)
+    return wrapper
+
+@title_decorator   
+def print_my_name(name, age):
+    print(name + " age: " + str(age))
+    
+
+#print_my_name()
+print_my_name("Vova",50)    
